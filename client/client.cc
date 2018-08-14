@@ -74,6 +74,8 @@ void ChatClient::RecvMsg(server::Data* data)
 
 } //end client
 
+
+#ifdef TEST_CHAT_CLIENT
 void* Send(void* arg)
 {
     //循环发送数据
@@ -103,6 +105,7 @@ void* Recv(void* arg)
     }
     return NULL;
 }
+
 //简易版客户端，用来测试
 int main(int argc, char* argv[])
 {
@@ -131,3 +134,4 @@ int main(int argc, char* argv[])
 
     return 0;
 }
+#endif
